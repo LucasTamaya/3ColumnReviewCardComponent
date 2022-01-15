@@ -16,6 +16,46 @@
 
 body{
     background-color: $neutral-clr-two;
+    width: 100vw;
+    height: 100%;
+    padding: 50px 20px;
+    @include flexCenter;
 }
 // End General style
+
+// Main container
+.main-container{
+    width: 350px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "sedans"
+    "suvs"
+    "luxury"
+    ;
+}
+// End Main container
+
+// Cards 
+.sedans{
+    grid-area: sedans;
+    @include cardItem($primary-clr-one);
+    border-radius: 10px 10px 0 0;
+}
+
+.suvs{
+    grid-area: suvs;
+    @include cardItem($primary-clr-two)
+}
+
+.luxury{
+    grid-area: luxury;
+    @include cardItem($primary-clr-three);
+    border-radius: 0 0 10px 10px;
+}
+// End Card 
+
+
 
