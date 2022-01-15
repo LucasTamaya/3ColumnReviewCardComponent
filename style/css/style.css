@@ -20,16 +20,17 @@ body {
 
 .main-container {
   width: 350px;
-  height: 100%;
+  height: fit-content;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "sedans" "suvs" "luxury";
+  column-gap: 0;
 }
 
 .sedans {
   grid-area: sedans;
-  width: 100%;
+  width: 350px;
   padding: 40px;
   background-color: #e38826;
   border-radius: 10px 10px 0 0;
@@ -61,10 +62,20 @@ body {
   background-color: #f2f2f2;
   border-radius: 25px;
 }
+@media screen and (min-width: 1440px) {
+  .sedans {
+    width: 300px;
+  }
+  .sedans p {
+    margin-bottom: 90px;
+    width: 220px;
+    line-height: 25px;
+  }
+}
 
 .suvs {
   grid-area: suvs;
-  width: 100%;
+  width: 350px;
   padding: 40px;
   background-color: #006970;
 }
@@ -95,10 +106,20 @@ body {
   background-color: #f2f2f2;
   border-radius: 25px;
 }
+@media screen and (min-width: 1440px) {
+  .suvs {
+    width: 300px;
+  }
+  .suvs p {
+    margin-bottom: 90px;
+    width: 220px;
+    line-height: 25px;
+  }
+}
 
 .luxury {
   grid-area: luxury;
-  width: 100%;
+  width: 350px;
   padding: 40px;
   background-color: #004241;
   border-radius: 0 0 10px 10px;
@@ -129,6 +150,38 @@ body {
   padding: 15px 30px;
   background-color: #f2f2f2;
   border-radius: 25px;
+}
+@media screen and (min-width: 1440px) {
+  .luxury {
+    width: 300px;
+  }
+  .luxury p {
+    margin-bottom: 90px;
+    width: 220px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
+
+  .main-container {
+    width: fit-content;
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "sedans suvs luxury";
+  }
+
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

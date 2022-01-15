@@ -5,7 +5,8 @@
 }
 
 @mixin cardItem($color) {
-    width: 100%;
+    width: 350px;
+    // max-width: 450px;
     padding: 40px;
     background-color: $color;
 
@@ -39,4 +40,19 @@
         background-color: $neutral-clr-two;
         border-radius: 25px;
     }
+
+    // Laptop screen
+    @media screen and (min-width: 1440px) {
+        width: 300px;
+
+        p{
+            margin-bottom: 90px;
+            width: 220px;
+            line-height: 25px;
+        }
+    }
+    // End Laptop screen
+
 }
+
+
