@@ -22,10 +22,8 @@ body {
   width: 350px;
   height: fit-content;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "sedans" "suvs" "luxury";
-  column-gap: 0;
 }
 
 .sedans {
@@ -61,6 +59,12 @@ body {
   padding: 15px 30px;
   background-color: #f2f2f2;
   border-radius: 25px;
+  transition: 0.2s ease;
+}
+.sedans .cta:hover {
+  outline: 3px solid #f2f2f2;
+  background-color: transparent;
+  color: #f2f2f2;
 }
 @media screen and (min-width: 1440px) {
   .sedans {
@@ -105,6 +109,12 @@ body {
   padding: 15px 30px;
   background-color: #f2f2f2;
   border-radius: 25px;
+  transition: 0.2s ease;
+}
+.suvs .cta:hover {
+  outline: 3px solid #f2f2f2;
+  background-color: transparent;
+  color: #f2f2f2;
 }
 @media screen and (min-width: 1440px) {
   .suvs {
@@ -150,6 +160,12 @@ body {
   padding: 15px 30px;
   background-color: #f2f2f2;
   border-radius: 25px;
+  transition: 0.2s ease;
+}
+.luxury .cta:hover {
+  outline: 3px solid #f2f2f2;
+  background-color: transparent;
+  color: #f2f2f2;
 }
 @media screen and (min-width: 1440px) {
   .luxury {
@@ -170,8 +186,7 @@ body {
   .main-container {
     width: fit-content;
     max-width: 1200px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "sedans suvs luxury";
   }
 

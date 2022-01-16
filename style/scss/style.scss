@@ -28,14 +28,12 @@ body{
     width: 350px;
     height: fit-content;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     "sedans"
     "suvs"
     "luxury"
     ;
-    column-gap: 0;
 }
 // End Main container
 
@@ -72,8 +70,7 @@ body{
     .main-container{
         width: fit-content;
         max-width: 1200px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
+        grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
         "sedans suvs luxury"
         ;
@@ -89,8 +86,6 @@ body{
         border-radius: 0 10px 10px 0;
     }
     //End Card
-
-
 }
 // End Laptop screen
 

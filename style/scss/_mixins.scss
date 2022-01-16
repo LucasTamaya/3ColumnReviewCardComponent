@@ -6,7 +6,6 @@
 
 @mixin cardItem($color) {
     width: 350px;
-    // max-width: 450px;
     padding: 40px;
     background-color: $color;
 
@@ -39,6 +38,13 @@
         padding: 15px 30px;
         background-color: $neutral-clr-two;
         border-radius: 25px;
+        transition: 0.2s ease;
+
+        &:hover{
+            outline: 3px solid $neutral-clr-two;
+            background-color: transparent;
+            color: $neutral-clr-two;
+        }
     }
 
     // Laptop screen
